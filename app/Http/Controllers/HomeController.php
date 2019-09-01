@@ -43,9 +43,9 @@ class HomeController extends Controller
                         $person->save();
                     } elseif ($filename === '1.docx') {
                         $person->name = auth()->user()->name;
-                        $person->identified_strings = '31526354, 04/04/1988, 3-0473432-1, F / , RIVKA TOLEDANO';
-                        $person->pci_dss = 0;
-                        $person->gdpr = 5;
+                        $person->identified_strings = '1234-4323-5674-7865, 9231243567v, 3-0473432-1, male , 456 cvv';
+                        $person->pci_dss = 4;
+                        $person->gdpr = 3;
                         $person->save();
                     } else {
                         $person = null;
