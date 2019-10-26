@@ -33,7 +33,7 @@ class HomeController extends Controller
         if ($request->has('filepond')) {
             $filename = $request->get('filepond');
             if (Storage::disk('tmp')->exists($filename)) {
-                if ($filename === '1.jpg' || $filename === '1.docx') {
+                if ($filename === '1.jpg' || $filename === '1.docx'||  $filename === '2.png' ||  $filename === '3.docx' ) {
                     $person = new Person();
                     if ($filename === '1.jpg') {
                         $person->name = auth()->user()->name;
