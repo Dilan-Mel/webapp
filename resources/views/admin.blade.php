@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
-                            <h2 class="title-1">overview</h2>
+                            <h2 class="title-1">Admin - {{$pci}}</h2>
                         </div>
                     </div>
                 </div>
@@ -102,11 +102,24 @@
                                                 <span>GDPR {{$gdpr}}</span>
                                             </div>
                                         </div>
+                                        <table style="border 1px solid">
+                                            <th>
+                                                <td>adsdas</td>
+                                            </th>
+                                            <?php foreach ($persons as $person) { ?>
+                                                <tr>
+                                                    <td>{{$person->name}}</td>
+                                                    <td>{{$person->identified_strings}}</td>
+                                                    <td>{{$person->pci_dss}}</td>
+                                                    <td>{{$person->gdpr}}</td>
+                                                </tr>
+                                            <?php } ?>
+                                        </table>
                                     </div>
                                     <div class="col-xl-6">
-                                        <div class="percent-chart">
-                                            <canvas id="percent-chart"></canvas>
-                                        </div>
+                                        <//div class="percent-chart">
+                                            <//canvas id="percent-chart"><//canvas>
+                                        <//div>
                                     </div>
                                 </div>
                             </div>

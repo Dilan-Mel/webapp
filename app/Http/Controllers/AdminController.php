@@ -6,7 +6,7 @@ use App\Person;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     public function __construct() {
         $this->middleware('auth');
@@ -19,9 +19,10 @@ class HomeController extends Controller
             $pci = $pci + $person->pci_dss;
             $gdpr = $gdpr + $person->gdpr;
         }
-        return view('home', [
+        return view('admin', [
             'pci' => $pci,
-            'gdpr' => $gdpr
+            'gdpr' => $gdpr,
+            'persons' => $persons
         ]);
     }
 
@@ -47,20 +48,7 @@ class HomeController extends Controller
                         $person->pci_dss = 4;
                         $person->gdpr = 3;
                         $person->save();
-                    }elseif ($filename === '2.png') {
-                        $person->name = auth()->user()->name;
-                        $person->identified_strings = 'Name, Address, email, cookies , 456 cvv';
-                        $person->pci_dss = 4;
-                        $person->gdpr = 3;
-                        $person->save();
-                    }elseif ($filename === '3.docx') {
-                        $person->name = auth()->user()->name;
-                        $person->identified_strings = '1234-4323-5674-7865, 9231243567v, 3-0473432-1, male , 456 cvv';
-                        $person->pci_dss = 4;
-                        $person->gdpr = 3;
-                        $person->save();
-                    }
-                    else {
+                    } else {
                         $person = null;
                     }
 

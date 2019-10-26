@@ -11,6 +11,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/admin', 'AdminController@index')->name('admin'); //added line
+
 Route::post('/files/process', 'FileController@process')->name('process.file');
 Route::delete('/files/delete', 'FileController@delete')->name('delete.file');
 
