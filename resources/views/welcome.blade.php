@@ -61,6 +61,11 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            img {
+                height: 400px;
+                width: 600px;
+            }
         </style>
     </head>
     <body>
@@ -81,6 +86,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
+                <img src="images/unnamed.png"><br>
                     PII-IC ENGINE
                 </div>
             </div>

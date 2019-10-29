@@ -91,7 +91,7 @@
                             <div class="au-card-inner">
                                 <h3 class="title-2 tm-b-5">Identified PII%</h3>
                                 <div class="row no-gutters">
-                                    <div class="col-xl-6">
+                                    <div class="col-xl-12">
                                         <div class="chart-note-wrap">
                                             <div class="chart-note mr-0 d-block">
                                                 <span class="dot dot--blue"></span>
@@ -102,25 +102,35 @@
                                                 <span>GDPR {{$gdpr}}</span>
                                             </div>
                                         </div>
-                                        <table style="border 1px solid">
-                                            <th>
-                                                <td>adsdas</td>
-                                            </th>
+
+                                       
+                                        <table border="1" class="table table-responsive-lg">
+                                        <thead>
+                                        <tr>
+                                            <th>User</th>
+                                            <th>User</th>
+                                            <th>User</th>
+                                            <th>User</th>
+                                        <tr>
+                                        </thead>
+                                        <tbody>
                                             <?php foreach ($persons as $person) { ?>
                                                 <tr>
                                                     <td>{{$person->name}}</td>
                                                     <td>{{$person->identified_strings}}</td>
                                                     <td>{{$person->pci_dss}}</td>
                                                     <td>{{$person->gdpr}}</td>
-                                                </tr>
-                                            <?php } ?>
-                                        </table>
+                                                </tr>    
+                                            <?php 
+                                        } ?>
+                                            </tbody>
+                                            </table>
                                     </div>
-                                    <div class="col-xl-6">
+                                    <!-- <div class="col-xl-6">
                                         <//div class="percent-chart">
                                             <//canvas id="percent-chart"><//canvas>
                                         <//div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
