@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
-                            <h2 class="title-1">Admin - {{$pci}}</h2>
+                            <h2 class="title-1">PII-IC Admin </h2>
                         </div>
                     </div>
                 </div>
@@ -20,8 +20,8 @@
                                         <i class="zmdi zmdi-account-o"></i>
                                     </div>
                                     <div class="text">
-                                        <h2>pii1</h2>
-                                        <span>User</span>
+                                        <h2>Number of users</h2>
+                                        <span>3</span>
                                     </div>
                                 </div>
                                 <div class="overview-chart">
@@ -38,7 +38,7 @@
                                         <i class="zmdi zmdi-shopping-cart"></i>
                                     </div>
                                     <div class="text">
-                                        <h2>20%</h2>
+                                        <h2>43%</h2>
                                         <span>PCI-DSS</span>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                         <i class="zmdi zmdi-calendar-note"></i>
                                     </div>
                                     <div class="text">
-                                        <h2>2</h2>
+                                        <h2>23%</h2>
                                         <span>GDPR</span>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                                         <i class="zmdi zmdi-money"></i>
                                     </div>
                                     <div class="text">
-                                        <h2>8</h2>
+                                        <h2>56%</h2>
                                         <span>Overall</span>
                                     </div>
                                 </div>
@@ -93,14 +93,8 @@
                                 <div class="row no-gutters">
                                     <div class="col-xl-12">
                                         <div class="chart-note-wrap">
-                                            <div class="chart-note mr-0 d-block">
-                                                <span class="dot dot--blue"></span>
-                                                <span>PCI DSS: {{$pci}} </span>
-                                            </div>
-                                            <div class="chart-note mr-0 d-block">
-                                                <span class="dot dot--red"></span>
-                                                <span>GDPR {{$gdpr}}</span>
-                                            </div>
+                                            
+                                            
                                         </div>
 
                                        
@@ -108,9 +102,9 @@
                                         <thead>
                                         <tr>
                                             <th>User</th>
-                                            <th>User</th>
-                                            <th>User</th>
-                                            <th>User</th>
+                                            <th>Identified PII Data</th>
+                                            <th>Number of PCI-DSS Data</th>
+                                            <th>Number of GDPR Data</th>
                                         <tr>
                                         </thead>
                                         <tbody>
